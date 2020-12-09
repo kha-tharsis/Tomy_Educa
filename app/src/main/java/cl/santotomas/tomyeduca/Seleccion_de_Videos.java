@@ -3,6 +3,8 @@ package cl.santotomas.tomyeduca;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,6 +42,9 @@ public class Seleccion_de_Videos extends AppCompatActivity {
 
         llenarDatos(listaVideos.get(0));
         num = 1;
+
+
+        btn_retroceder.setBackground(this.getResources().getDrawable(R.drawable.leftarrow));
         btn_retroceder.setEnabled(false);
         init();
 
@@ -60,11 +65,15 @@ public class Seleccion_de_Videos extends AppCompatActivity {
                 if(num>1) {
                     num--;
                     llenarDatos(listaVideos.get(num-1));
+                    btn_retroceder.setBackground(getResources().getDrawable(R.drawable.newleftarrow));
                     btn_retroceder.setEnabled(true);
+                    btn_avanzar.setBackground(getResources().getDrawable(R.drawable.newrigtharrow));
                     btn_avanzar.setEnabled(true);
                 }
                 if(num==1){
+                    btn_retroceder.setBackground(getResources().getDrawable(R.drawable.leftarrow));
                     btn_retroceder.setEnabled(false);
+                    btn_avanzar.setBackground(getResources().getDrawable(R.drawable.newrigtharrow));
                     btn_avanzar.setEnabled(true);
                 }
             }
@@ -75,11 +84,15 @@ public class Seleccion_de_Videos extends AppCompatActivity {
                 if(num<listaVideos.size()){
                     llenarDatos(listaVideos.get(num));
                     num++;
-                    btn_avanzar.setEnabled(true);
+                    btn_retroceder.setBackground(getResources().getDrawable(R.drawable.newleftarrow));
                     btn_retroceder.setEnabled(true);
+                    btn_avanzar.setBackground(getResources().getDrawable(R.drawable.newrigtharrow));
+                    btn_avanzar.setEnabled(true);
                 }
                 if(num == listaVideos.size()){
+                    btn_avanzar.setBackground(getResources().getDrawable(R.drawable.rigtharrow));
                     btn_avanzar.setEnabled(false);
+                    btn_retroceder.setBackground(getResources().getDrawable(R.drawable.newleftarrow));
                     btn_retroceder.setEnabled(true);
                 }
             }
