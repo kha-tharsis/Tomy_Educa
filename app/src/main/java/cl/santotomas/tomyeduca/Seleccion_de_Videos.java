@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,7 +17,7 @@ import cl.santotomas.tomyeduca.modelo.Video;
 
 public class Seleccion_de_Videos extends AppCompatActivity {
     private TextView text_titulo,text_descripcion;
-    private ImageButton btn_reproducir,btn_retroceder,btn_avanzar;
+    private Button btn_reproducir,btn_retroceder,btn_avanzar;
     private ImageView imagenVideo;
     private int num;
     public static List<Video> listaVideos;
@@ -30,16 +31,15 @@ public class Seleccion_de_Videos extends AppCompatActivity {
         text_titulo = findViewById(R.id.tv_titulo);
         text_descripcion = findViewById(R.id.tv_Descripcion_Video);
 
-        btn_reproducir = findViewById(R.id.imageButtonReproducir);
-        btn_retroceder = findViewById(R.id.imageButtonRetroceder);
-        btn_avanzar = findViewById(R.id.imageButtonAvanzar);
+        btn_reproducir = findViewById(R.id.bt_rep);
+        btn_retroceder = findViewById(R.id.bt_back);
+        btn_avanzar = findViewById(R.id.bt_next);
         BD bd = new BD(getApplicationContext());
         listaVideos = bd.getAllVideos();
 
 
         llenarDatos(listaVideos.get(0));
         num = 1;
-        btn_retroceder.setImageAlpha(75);
         btn_retroceder.setEnabled(false);
         init();
 
@@ -60,15 +60,11 @@ public class Seleccion_de_Videos extends AppCompatActivity {
                 if(num>1) {
                     num--;
                     llenarDatos(listaVideos.get(num-1));
-                    btn_retroceder.setImageAlpha(255);
                     btn_retroceder.setEnabled(true);
-                    btn_avanzar.setImageAlpha(255);
                     btn_avanzar.setEnabled(true);
                 }
                 if(num==1){
-                    btn_retroceder.setImageAlpha(75);
                     btn_retroceder.setEnabled(false);
-                    btn_avanzar.setImageAlpha(255);
                     btn_avanzar.setEnabled(true);
                 }
             }
@@ -79,15 +75,11 @@ public class Seleccion_de_Videos extends AppCompatActivity {
                 if(num<listaVideos.size()){
                     llenarDatos(listaVideos.get(num));
                     num++;
-                    btn_avanzar.setImageAlpha(255);
                     btn_avanzar.setEnabled(true);
-                    btn_retroceder.setImageAlpha(255);
                     btn_retroceder.setEnabled(true);
                 }
                 if(num == listaVideos.size()){
-                    btn_avanzar.setImageAlpha(75);
                     btn_avanzar.setEnabled(false);
-                    btn_retroceder.setImageAlpha(255);
                     btn_retroceder.setEnabled(true);
                 }
             }

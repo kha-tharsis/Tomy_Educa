@@ -77,10 +77,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <ImageButton
-                android:id="@+id/imageButtonRetroceder"
-                android:layout_width="60dp"
-                android:layout_height="70dp"
+            <Button
+                android:id="@+id/bt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/newleftarrow" />
 
@@ -89,11 +89,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <ImageButton
-                android:id="@+id/imageButtonReproducir"
-                android:layout_width="60dp"
-                android:layout_height="70dp"
-                android:layout_weight="1"
+            <Button
+                android:id="@+id/bt_rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@drawable/play" />
 
             <Space
@@ -101,10 +100,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <ImageButton
-                android:id="@+id/imageButtonAvanzar"
-                android:layout_width="60dp"
-                android:layout_height="70dp"
+            <Button
+                android:id="@+id/bt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/newrigtharrow" />
 
