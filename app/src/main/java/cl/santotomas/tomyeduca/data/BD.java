@@ -26,7 +26,7 @@ public class BD extends SQLiteOpenHelper {
 
 
 
-    private static final String insertTabla_Video = "INSERT INTO video VALUES(NULL,'Categorías Semánticas','ZgWD9ST7js8','Este video trata buscar el elemento que no corresponde a la familia de palabras o categorías semánticas.');";
+    private static final String insertTabla_Video = "INSERT INTO video VALUES(NULL,'Categorías Semánticas','ZgWD9ST7js8','En este vídeo, trata de encontrar el elemento que no corresponde a la familia de palabras o categorías semánticas.');";
     private static final String insertTabla_Video2 = "INSERT INTO video VALUES(NULL,'Estaciones del año','8WJJf6WpfnY','Reconocer las estaciones del año y sus características, y asimilar los objetos correspondientes a cada estación que se le indique.  (Lenguaje expresivo).');";
     private static final String insertTabla_Video3 = "INSERT INTO video VALUES(NULL,'Fonema R fuerte','GQ0xIEJjj58','Actividades de articulación del fonema R fuerte o /rr/.');";
     private static final String insertTabla_Video4 = "INSERT INTO video VALUES(NULL,'¡Juguemos con las rimas!','377lcXJLS6Q','Este video trata de las rimas, las que se ven reflejadas en seis ejercicios con tres respuestas cada uno, en donde se deben elegir dos palabras que suenen parecido al final.');";
@@ -42,16 +42,8 @@ public class BD extends SQLiteOpenHelper {
     private static final String insertTabla_Video14 = "INSERT INTO video VALUES(NULL,'El zorro arrepentido','CnTno1ZyLTM','Obra en un teatrillo de Sombras llamada El zorron arrepentido ');";
     private static final String insertTabla_Video15 = "INSERT INTO video VALUES(NULL,'Las vocales ','xzxUI9pmCEE','Video que trata sobre las vocales, estas son letras que pertenecen a nuestro abecedario, son 5 y éstas en compañía de las consonantes forman las sílabas');";
 
-
-
-
-
-
-
-
     public BD(Context context) {
         super(context, NAME, null, VERSION);
-
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -71,7 +63,6 @@ public class BD extends SQLiteOpenHelper {
         db.execSQL(insertTabla_Video13);
         db.execSQL(insertTabla_Video14);
         db.execSQL(insertTabla_Video15);
-
     }
 
     @Override
