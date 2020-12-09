@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Tomy Educa</string>
+
+    <string name="Title_Main_Activity">TOMY EDUCA</string>
+    <string name="tv_selec">Selecciona tú colegio:</string>
+    <string name="videos">Videos</string>
+    <string name="ubicacion">Ubicacion Santo Tomas</string>
 </resources>
