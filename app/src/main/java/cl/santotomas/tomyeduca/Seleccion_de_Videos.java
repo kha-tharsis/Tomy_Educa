@@ -102,7 +102,7 @@ public class Seleccion_de_Videos extends AppCompatActivity {
 
     }
     private void enviarImagenporId(int id){
-<<<<<<< HEAD
+
        /* imagenVideo = (ImageView) findViewById(R.id.imageView); imagenVideo.setImageResource(R.drawable.video1);
 =======
         imagenVideo = (ImageView) findViewById(R.id.imageView); imagenVideo.setImageResource(R.drawable.videos);
